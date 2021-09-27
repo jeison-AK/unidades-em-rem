@@ -3,45 +3,55 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
+/*-em: es relativa al tamaño de fuente de padre mas cercano
+/*-rem: es relativa al tamaño de fuente del html (root) no del body so its the html font-size*/
+	/**when used with margin and paddings the em it's looking at the font-size of the element NOT the father or the root
+	/**BUT with rem it's looking at the font-size of the root element so the font-size in the html*/
 body {
-	background: #f2f2f2;
+	background: hsl(0, 0%, 95%);
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 }
 
 .contenedor {
-	background: #550a46;
-	color: #fff;
+	background: hsl(312, 79%, 19%);
+	color: hsl(0, 0%, 100%);
 	width: 90%;
-	max-width: 800px;
-	margin: 29.92px auto;
-	padding: 29.92px;
+	max-width: 50em;
+	margin: 1.57em auto;
+	padding: 1.87em;
 	border-radius: 10px;
+	font-size: 1em; /*ahora si cambiamos el font-size aqui toas las demas partes que usan em
+	se veran modificadas automaticamente */
 }
 
 .contenedor h1 {
-	color: #f8b400;
-	margin-bottom: 20px;
+	color: hsl(44, 100%, 49%);
+	margin-bottom: 1.25rem;
 	font-family: 'Merriweather', serif;
 	font-weight: normal;
-	font-size: 32px;
+	font-size: 2em;
 }
 
 .contenedor p {
 	line-height: 200%;
-	margin-bottom: 20px;
-	font-size: 16px;
+	margin-bottom: 1.25em;
+	font-size: 1em;
 }
 
 .contenedor button {
 	font-size: 1rem;
 	display: inline-block;
-	padding: 10px 20px;
+	padding: 0.625em 1.25em;
 	font-family: 'Open Sans', sans-serif;
 	border: none;
 	cursor: pointer;
-	background: #617be3;
-	color: #fff;
+	background: hsl(228, 70%, 64%);
+	color: hsl(0, 0%, 100%);
 	border-radius: 100px;
+}
+@media screen and (max-width: 500px){
+	.contenedor{
+		font-size: 12px;
+	}
 }
