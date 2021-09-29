@@ -20,7 +20,7 @@ body {
 	max-width: 50em;
 	margin: 1.57em auto;
 	padding: 1.87em;
-	border-radius: 10
+	border-radius: 10px
 	font-size: 1em; /*ahora si cambiamos el font-size aqui toas las demas partes que usan em
 	se veran modificadas automaticamente */
 }
